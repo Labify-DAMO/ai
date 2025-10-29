@@ -40,12 +40,12 @@ source .venv/bin/activate
 
 4. **의존성 설치**
 ```bash
-# CPU 전용
 pip install -r requirements.txt
+# GPU(CUDA 12.1) 있는 경우:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# CUDA GPU 사용 시 (CUDA 12.1 기준)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-pip install -r requirements.txt
+# CPU 전용인 경우:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```
 
 ## 🚀 서버 실행
